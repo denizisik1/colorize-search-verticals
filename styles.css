@@ -1,0 +1,187 @@
+.gstv-bar[role="list"] {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 8px;
+    row-gap: 8px;
+    padding: 4px 0 8px;
+}
+
+.gstv-bar[role="list"] > [role="listitem"] {
+    margin: 0;
+}
+
+.gstv-bar [data-gstv-id] > a,
+.gstv-bar [data-gstv-id] a.C6AK7c {
+    text-decoration: none !important;
+}
+
+.gstv-bar .gstv-chip {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center;
+    min-height: 30px !important;
+    padding: 4px 12px !important;
+    border-radius: 999px;
+    border-bottom: 0 !important;
+    box-sizing: border-box;
+    line-height: 1.2;
+}
+
+.gstv-bar .gstv-chip .mVH5Fc {
+    padding-bottom: 0 !important;
+    border-bottom: 0 !important;
+}
+
+.gstv-bar .gstv-chip .R1QWuf {
+    padding: 0 !important;
+    border-bottom: 0 !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.01em;
+}
+
+.gstv-bar .gstv-chip:hover {
+    filter: brightness(1.08);
+}
+
+.gstv-bar .gstv-current .gstv-chip {
+    box-shadow: 0 0 0 2px Canvas, 0 0 0 4px #fdd663;
+    filter: saturate(1.15);
+}
+
+.gstv-bar [data-gstv-id="all"] .gstv-chip {
+    background-color: #1a73e8;
+    background-image: none;
+}
+
+.gstv-bar [data-gstv-id="images"] .gstv-chip {
+    background-color: #d93025;
+    background-image: radial-gradient(#ffffff 1.05px, transparent 1.15px);
+    background-size: 5px 5px;
+}
+
+.gstv-bar [data-gstv-id="videos"] .gstv-chip {
+    background-color: #7b1fa2;
+    background-image: repeating-linear-gradient(
+        135deg,
+        transparent 0,
+        transparent 5px,
+        rgba(255, 255, 255, 0.22) 5px,
+        rgba(255, 255, 255, 0.22) 8px
+    );
+}
+
+.gstv-bar [data-gstv-id="maps"] .gstv-chip {
+    background-color: #188038;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.22) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.22) 1px, transparent 1px);
+    background-size: 7px 7px;
+}
+
+.gstv-bar [data-gstv-id="news"] .gstv-chip {
+    background-color: #e37400;
+    background-image: repeating-linear-gradient(
+        180deg,
+        transparent 0,
+        transparent 4px,
+        rgba(255, 255, 255, 0.28) 4px,
+        rgba(255, 255, 255, 0.28) 6px
+    );
+}
+
+.gstv-bar [data-gstv-id="shopping"] .gstv-chip {
+    background-color: #f9ab00;
+    background-image:
+        linear-gradient(45deg, rgba(80, 56, 0, 0.22) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(80, 56, 0, 0.22) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(80, 56, 0, 0.22) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(80, 56, 0, 0.22) 75%);
+    background-size: 8px 8px;
+    background-position: 0 0, 0 4px, 4px -4px, -4px 0;
+}
+
+.gstv-bar [data-gstv-id="books"] .gstv-chip {
+    background-color: #8d6e63;
+    background-image: repeating-linear-gradient(
+        90deg,
+        transparent 0,
+        transparent 5px,
+        rgba(255, 255, 255, 0.24) 5px,
+        rgba(255, 255, 255, 0.24) 7px
+    );
+}
+
+.gstv-bar [data-gstv-id="forums"] .gstv-chip {
+    background-color: #00897b;
+    background-image:
+        repeating-linear-gradient(45deg, transparent 0, transparent 4px, rgba(255, 255, 255, 0.22) 4px, rgba(255, 255, 255, 0.22) 6px),
+        repeating-linear-gradient(-45deg, transparent 0, transparent 4px, rgba(255, 255, 255, 0.16) 4px, rgba(255, 255, 255, 0.16) 6px);
+}
+
+.gstv-bar [data-gstv-id="shorts"] .gstv-chip {
+    background-color: #c2185b;
+    background-image: radial-gradient(#ffffff 1.2px, transparent 1.3px);
+    background-size: 4px 4px;
+}
+
+.gstv-bar [data-gstv-id="flights"] .gstv-chip {
+    background-color: #0277bd;
+    background-image: repeating-linear-gradient(
+        -25deg,
+        transparent 0,
+        transparent 6px,
+        rgba(255, 255, 255, 0.28) 6px,
+        rgba(255, 255, 255, 0.28) 9px
+    );
+}
+
+.gstv-bar [data-gstv-id="finance"] .gstv-chip {
+    background-color: #37474f;
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent 0,
+        transparent 3px,
+        rgba(255, 255, 255, 0.2) 3px,
+        rgba(255, 255, 255, 0.2) 5px
+    );
+}
+
+.gstv-bar [data-gstv-id="ai"] .gstv-chip {
+    background-color: #3949ab;
+    background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.35), transparent 42%);
+}
+
+.gstv-bar [data-gstv-id="more"] .gstv-chip {
+    background-color: #5f6368;
+    background-image: repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.18) 0,
+        rgba(255, 255, 255, 0.18) 2px,
+        transparent 2px,
+        transparent 6px
+    );
+}
+
+.gstv-bar .gstv-chip .R1QWuf,
+.gstv-bar .gstv-chip .R1QWuf *,
+.gstv-bar .gstv-chip:hover .R1QWuf {
+    color: #ffffff !important;
+}
+
+.gstv-bar [data-gstv-id="shopping"] .gstv-chip .R1QWuf,
+.gstv-bar [data-gstv-id="shopping"] .gstv-chip .R1QWuf *,
+.gstv-bar [data-gstv-id="shopping"] .gstv-chip:hover .R1QWuf {
+    color: #3c3000 !important;
+}
+
+@media (forced-colors: active) {
+    .gstv-bar .gstv-chip {
+        border: 2px solid CanvasText;
+        background: Canvas;
+    }
+
+    .gstv-bar .gstv-chip .R1QWuf {
+        color: CanvasText !important;
+    }
+}
