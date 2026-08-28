@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Google Search Verticals",
-  "version": "2.0",
+  "version": "2.1",
 
   "description": "Pin Google search tabs in a fixed order, restore omitted verticals, and color each one so Images, Videos, Maps and the rest always look and sit the same.",
 
@@ -44,8 +44,14 @@
         "*://www.google.com.sg/*",
         "*://www.google.co.za/*"
       ],
-      "css": ["styles.css"],
-      "js": ["verticals.js", "app.js"],
+      "css": ["src/css/bar.css", "src/css/colors.css"],
+      "js": [
+        "src/js/config.js",
+        "src/js/urls.js",
+        "src/js/identify.js",
+        "src/js/items.js",
+        "src/js/apply.js"
+      ],
       "run_at": "document_idle"
     }
   ]

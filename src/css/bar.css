@@ -1,0 +1,73 @@
+.gstv-bar[role="list"] {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 8px;
+    row-gap: 8px;
+    padding: 4px 0 8px;
+}
+
+.gstv-bar[role="list"] > [role="listitem"] {
+    margin: 0;
+}
+
+.gstv-bar [data-gstv-id] > a,
+.gstv-bar [data-gstv-id] a.C6AK7c {
+    text-decoration: none !important;
+}
+
+.gstv-bar .gstv-chip {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center;
+    min-height: 30px !important;
+    padding: 4px 12px !important;
+    border-radius: 999px;
+    border-bottom: 0 !important;
+    box-sizing: border-box;
+    line-height: 1.2;
+}
+
+.gstv-bar .gstv-chip .mVH5Fc {
+    padding-bottom: 0 !important;
+    border-bottom: 0 !important;
+}
+
+.gstv-bar .gstv-chip .R1QWuf {
+    padding: 0 !important;
+    border-bottom: 0 !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.01em;
+}
+
+.gstv-bar .gstv-chip:hover {
+    filter: brightness(1.06);
+}
+
+.gstv-bar .gstv-current .gstv-chip {
+    box-shadow: 0 0 0 2px Canvas, 0 0 0 4px #d4b45a;
+    filter: saturate(1.08);
+}
+
+.gstv-bar .gstv-chip .R1QWuf,
+.gstv-bar .gstv-chip .R1QWuf *,
+.gstv-bar .gstv-chip:hover .R1QWuf {
+    color: #ffffff !important;
+}
+
+.gstv-bar [data-gstv-id="shopping"] .gstv-chip .R1QWuf,
+.gstv-bar [data-gstv-id="shopping"] .gstv-chip .R1QWuf *,
+.gstv-bar [data-gstv-id="shopping"] .gstv-chip:hover .R1QWuf {
+    color: #3c3000 !important;
+}
+
+@media (forced-colors: active) {
+    .gstv-bar .gstv-chip {
+        border: 2px solid CanvasText;
+        background: Canvas;
+    }
+
+    .gstv-bar .gstv-chip .R1QWuf {
+        color: CanvasText !important;
+    }
+}
