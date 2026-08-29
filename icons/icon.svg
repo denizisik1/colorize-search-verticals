@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <pattern id="dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.05" fill="#ffffff" fill-opacity="0.35"/>
+    </pattern>
+    <pattern id="diagonal" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(135 5.5 5.5)">
+      <rect x="0" y="0" width="11" height="3" fill="#ffffff" fill-opacity="0.18"/>
+    </pattern>
+    <pattern id="grid" width="7" height="7" patternUnits="userSpaceOnUse">
+      <rect width="7" height="1" fill="#ffffff" fill-opacity="0.18"/>
+      <rect width="1" height="7" fill="#ffffff" fill-opacity="0.18"/>
+    </pattern>
+    <pattern id="stripes" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect y="4" width="6" height="2" fill="#ffffff" fill-opacity="0.22"/>
+    </pattern>
+    <pattern id="checker" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#503800" fill-opacity="0.18"/>
+      <rect x="4" y="4" width="4" height="4" fill="#503800" fill-opacity="0.18"/>
+    </pattern>
+  </defs>
+
+  <rect width="128" height="128" rx="28" fill="#2d2e30"/>
+
+  <rect x="14" y="14" width="46" height="28" rx="14" fill="#5b7fa6"/>
+
+  <rect x="68" y="14" width="46" height="28" rx="14" fill="#b56e62"/>
+  <rect x="68" y="14" width="46" height="28" rx="14" fill="url(#dots)"/>
+
+  <rect x="14" y="50" width="46" height="28" rx="14" fill="#7a5a96"/>
+  <rect x="14" y="50" width="46" height="28" rx="14" fill="url(#diagonal)"/>
+
+  <rect x="68" y="50" width="46" height="28" rx="14" fill="#3d8b57"/>
+  <rect x="68" y="50" width="46" height="28" rx="14" fill="url(#grid)"/>
+
+  <rect x="14" y="86" width="46" height="28" rx="14" fill="#c4843c"/>
+  <rect x="14" y="86" width="46" height="28" rx="14" fill="url(#stripes)"/>
+
+  <rect x="68" y="86" width="46" height="28" rx="14" fill="#e0b04a"/>
+  <rect x="68" y="86" width="46" height="28" rx="14" fill="url(#checker)"/>
+</svg>
