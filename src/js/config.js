@@ -1,10 +1,13 @@
-const VERTICAL_ORDER = [
+const MAIN_ORDER = [
     'all',
     'images',
     'videos',
     'maps',
     'news',
-    'shopping',
+    'shopping'
+];
+
+const MORE_ORDER = [
     'books',
     'forums',
     'shorts',
@@ -12,6 +15,8 @@ const VERTICAL_ORDER = [
     'finance',
     'ai'
 ];
+
+const VERTICAL_ORDER = MAIN_ORDER.concat(MORE_ORDER);
 
 const VERTICAL_META = {
     all: { label: 'All' },

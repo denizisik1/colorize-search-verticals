@@ -1,25 +1,166 @@
-.gstv-bar[role="list"] {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 6px 8px;
-    row-gap: 8px;
-    padding: 4px 0 8px;
+.gstv-bar-wrap {
+    display: flex !important;
+    flex-wrap: nowrap;
+    align-items: center !important;
+    justify-content: space-between;
+    gap: 12px;
+    min-width: 0;
+    overflow: visible !important;
 }
 
-.gstv-bar[role="list"] > [role="listitem"] {
+.gstv-unclip {
+    overflow: visible !important;
+}
+
+.gstv-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 100%;
+    overflow: visible;
+    padding: 4px 4px 4px 12px;
+    margin-left: 0 !important;
+}
+
+.gstv-bar > [role="listitem"],
+.gstv-bar > a {
+    flex: 0 0 auto;
     margin: 0;
 }
 
-.gstv-bar [data-gstv-id] > a,
-.gstv-bar [data-gstv-id] a.C6AK7c {
-    text-decoration: none !important;
+.gstv-tools,
+.gstv-tools > *,
+.gstv-tools #hdtb-tls,
+.gstv-tools #hdtb-tls:hover,
+.gstv-tools [aria-controls="hdtbMenus"],
+.gstv-tools [aria-controls="hdtbMenus"]:hover {
+    flex: 0 0 auto !important;
+    width: max-content !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    align-self: center;
 }
 
-.gstv-bar .gstv-chip {
+.gstv-hidden {
+    display: none !important;
+}
+
+.gstv-tools .gstv-chip,
+.gstv-tools .gstv-chip:hover,
+.gstv-bar .gstv-more-button {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center;
+    gap: 4px;
+    width: max-content !important;
+    min-width: 0 !important;
+    height: 30px;
+    max-height: 30px;
+    padding: 4px 12px !important;
+    background: #dadce0 !important;
+    background-image: none !important;
+    border: 0;
+    box-shadow: none;
+}
+
+.gstv-caret,
+.gstv-tools svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    color: #202124;
+    fill: currentColor;
+}
+
+.gstv-more-button[aria-expanded="true"] .gstv-caret {
+    transform: rotate(180deg);
+}
+
+.gstv-tools .gstv-chip .R1QWuf,
+.gstv-tools .gstv-chip .M5dSnd,
+.gstv-tools .gstv-chip .mVH5Fc,
+.gstv-tools .gstv-chip:hover .R1QWuf,
+.gstv-tools .gstv-chip:hover .M5dSnd,
+.gstv-tools .gstv-chip:hover .mVH5Fc {
+    color: #202124 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    border-bottom: 0 !important;
+    font-weight: 600 !important;
+}
+
+.gstv-bar .gstv-more-button {
+    color: #202124 !important;
+    padding: 4px 12px !important;
+    border-bottom: 0 !important;
+    font-weight: 600 !important;
+}
+
+.gstv-more-button {
+    appearance: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+#gstv-more-panel,
+#gstv-more-panel:popover-open {
+    box-sizing: border-box !important;
+    position: fixed !important;
+    inset: unset !important;
+    margin: 0 !important;
+    width: min(280px, calc(100vw - 16px)) !important;
+    min-width: 0 !important;
+    max-width: calc(100vw - 16px) !important;
+    height: auto !important;
+    max-height: min(70vh, 480px) !important;
+    overflow: auto !important;
+    padding: 8px !important;
+    border: 0 !important;
+    border-radius: 12px !important;
+    background: #2d2e30 !important;
+    color: #e8eaed !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55) !important;
+}
+
+#gstv-more-panel .gstv-menu-link {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 14px;
+    margin: 2px 0;
+    border-radius: 8px;
+    white-space: nowrap;
+    color: #e8eaed;
+    text-decoration: none;
+    font: 500 14px/1.4 inherit;
+}
+
+#gstv-more-panel .gstv-menu-link:hover,
+#gstv-more-panel .gstv-menu-link:active {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.gstv-bar [data-gstv-id] > a,
+.gstv-bar [data-gstv-id] a.C6AK7c,
+.gstv-bar > a[data-gstv-id] {
+    text-decoration: none !important;
+}
+
+.gstv-bar .gstv-chip,
+.gstv-tools .gstv-chip {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center;
+    width: max-content !important;
+    min-width: 0 !important;
     min-height: 30px !important;
     padding: 4px 12px !important;
     border-radius: 999px;
@@ -28,25 +169,30 @@
     line-height: 1.2;
 }
 
-.gstv-bar .gstv-chip .mVH5Fc {
+.gstv-bar .gstv-chip .mVH5Fc,
+.gstv-tools .gstv-chip .mVH5Fc {
     padding-bottom: 0 !important;
     border-bottom: 0 !important;
 }
 
-.gstv-bar .gstv-chip .R1QWuf {
+.gstv-bar .gstv-chip .R1QWuf,
+.gstv-tools .gstv-chip .R1QWuf {
     padding: 0 !important;
     border-bottom: 0 !important;
     font-weight: 600 !important;
     letter-spacing: 0.01em;
 }
 
-.gstv-bar .gstv-chip:hover {
-    filter: brightness(1.06);
+@media (hover: hover) {
+    .gstv-bar .gstv-chip:hover,
+    .gstv-tools .gstv-chip:hover {
+        filter: brightness(1.06);
+    }
 }
 
-.gstv-bar .gstv-current .gstv-chip {
-    box-shadow: 0 0 0 2px Canvas, 0 0 0 4px #d4b45a;
-    filter: saturate(1.08);
+.gstv-bar .gstv-current .gstv-chip,
+.gstv-bar .gstv-current.gstv-chip {
+    box-shadow: inset 0 0 0 2px #e8c36a;
 }
 
 .gstv-bar .gstv-chip .R1QWuf,
@@ -55,10 +201,49 @@
     color: #ffffff !important;
 }
 
-.gstv-bar [data-gstv-id="shopping"] .gstv-chip .R1QWuf,
-.gstv-bar [data-gstv-id="shopping"] .gstv-chip .R1QWuf *,
-.gstv-bar [data-gstv-id="shopping"] .gstv-chip:hover .R1QWuf {
+.gstv-bar .gstv-more-button {
+    color: #202124 !important;
+}
+
+.gstv-bar .gstv-chip[data-gstv-id]:not([data-gstv-id="more"]) {
+    color: #ffffff;
+}
+
+.gstv-bar .gstv-chip[data-gstv-id="shopping"],
+.gstv-bar .gstv-chip[data-gstv-id="shopping"] .R1QWuf,
+.gstv-bar .gstv-chip[data-gstv-id="shopping"] .R1QWuf *,
+.gstv-bar .gstv-chip[data-gstv-id="shopping"]:hover .R1QWuf {
     color: #3c3000 !important;
+}
+
+@media (max-width: 720px) {
+    .gstv-bar-wrap {
+        gap: 8px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .gstv-bar {
+        overflow-x: auto;
+        overflow-y: hidden;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        padding: 4px 8px;
+    }
+
+    .gstv-bar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .gstv-bar .gstv-chip,
+    .gstv-bar .gstv-more-button,
+    .gstv-tools .gstv-chip {
+        min-height: 36px !important;
+        height: 36px;
+        max-height: 36px;
+        padding: 4px 10px !important;
+    }
 }
 
 @media (forced-colors: active) {

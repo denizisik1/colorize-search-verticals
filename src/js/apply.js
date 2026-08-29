@@ -13,23 +13,64 @@ function takeFoundItem(found, item, id) {
     }
 }
 
+function placeMainTabs(list, found, query) {
+    MAIN_ORDER.forEach((id) => {
+        let item = found[id];
+        if (!item) {
+            const stale = list.querySelector(':scope > [data-gstv-injected="true"][data-gstv-id="' + id + '"]');
+            item = stale || createVerticalItem(id, query);
+        }
+        paintItem(item, id);
+        list.appendChild(item);
+    });
+}
+
+function collectOverflow(found, extras, currentId) {
+    const overflow = [];
+    const seen = [];
+
+    function add(item) {
+        if (!item || seen.indexOf(item) !== -1) {
+            return;
+        }
+        seen.push(item);
+        overflow.push(item);
+    }
+
+    MORE_ORDER.forEach((id) => {
+        if (id !== currentId && found[id]) {
+            add(found[id]);
+        }
+    });
+    extras.forEach(add);
+    return overflow;
+}
+
 function applyVerticals() {
+    if (isMorePanelOpen()) {
+        return;
+    }
     const list = findTabList();
     if (!list) {
         return;
     }
 
     list.classList.add('gstv-bar');
+    placeToolsBar(list);
     const query = getSearchQuery();
+    const currentId = identifyFromPage();
     const items = collectItems(list);
     const found = {};
     const extras = [];
-    let moreItem = null;
+    let googleMore = null;
 
     items.forEach((item) => {
         const id = identifyItem(item);
         if (id === 'more') {
-            moreItem = item;
+            if (item.getAttribute('data-gstv-injected-more') === 'true') {
+                return;
+            }
+            googleMore = item;
             return;
         }
         if (id && VERTICAL_ORDER.indexOf(id) !== -1) {
@@ -39,36 +80,74 @@ function applyVerticals() {
         extras.push(item);
     });
 
-    VERTICAL_ORDER.forEach((id) => {
-        let item = found[id];
-        if (!item) {
-            const stale = list.querySelector(':scope > [data-gstv-injected="true"][data-gstv-id="' + id + '"]');
-            item = stale || createVerticalItem(id, query);
-        }
-        paintItem(item, id);
-        list.appendChild(item);
-    });
+    placeMainTabs(list, found, query);
 
-    extras.forEach((item) => {
-        if (item.parentElement === list) {
-            list.appendChild(item);
-        }
-    });
-
-    if (moreItem) {
-        const leftover = moreItem.querySelector('[role="listitem"]');
-        if (leftover) {
-            paintItem(moreItem, 'more');
-            list.appendChild(moreItem);
-        } else {
-            moreItem.style.display = 'none';
-        }
+    if (MORE_ORDER.indexOf(currentId) !== -1 && found[currentId]) {
+        paintItem(found[currentId], currentId);
+        list.appendChild(found[currentId]);
     }
 
-    hideEmptyOverflow(list);
+    const overflow = collectOverflow(found, extras, currentId);
+    const moreItem = ensureMoreItem(list);
+    const panel = fillMorePanel(overflow);
+
+    if (googleMore) {
+        hideOriginalItem(googleMore);
+    }
+
+    if (panel.children.length === 0) {
+        moreItem.style.display = 'none';
+    } else {
+        moreItem.style.display = '';
+        list.appendChild(moreItem);
+    }
+
+    hideGoogleOverflow(list);
 }
 
 let applyTimer = null;
+let outsideClickBound = false;
+let lastViewportWidth = window.innerWidth;
+
+function bindOutsideClick() {
+    if (outsideClickBound) {
+        return;
+    }
+    outsideClickBound = true;
+    document.addEventListener('pointerdown', function (event) {
+        const target = event.target;
+        if (!isMorePanelOpen()) {
+            return;
+        }
+        if (target.closest && target.closest('.gstv-more-button')) {
+            return;
+        }
+        const panel = getMorePanel();
+        if (panel && panel.contains(target)) {
+            return;
+        }
+        closeMorePanel();
+    }, true);
+    window.addEventListener('resize', function () {
+        if (window.innerWidth === lastViewportWidth) {
+            return;
+        }
+        lastViewportWidth = window.innerWidth;
+        if (isMorePanelOpen()) {
+            closeMorePanel();
+        }
+    });
+    document.addEventListener('scroll', function (event) {
+        if (!isMorePanelOpen()) {
+            return;
+        }
+        const panel = getMorePanel();
+        if (panel && event.target && panel.contains(event.target)) {
+            return;
+        }
+        closeMorePanel();
+    }, true);
+}
 
 const observer = new MutationObserver(() => {
     if (applyTimer !== null) {
@@ -86,6 +165,7 @@ const observer = new MutationObserver(() => {
 });
 
 function start() {
+    bindOutsideClick();
     applyVerticals();
     observer.observe(document.documentElement, {
         childList: true,

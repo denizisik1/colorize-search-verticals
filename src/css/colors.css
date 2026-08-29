@@ -1,15 +1,15 @@
-.gstv-bar [data-gstv-id="all"] .gstv-chip {
+.gstv-bar .gstv-chip[data-gstv-id="all"] {
     background-color: #5b7fa6;
     background-image: none;
 }
 
-.gstv-bar [data-gstv-id="images"] .gstv-chip {
+.gstv-bar .gstv-chip[data-gstv-id="images"] {
     background-color: #b56e62;
     background-image: radial-gradient(rgba(255, 255, 255, 0.35) 1.05px, transparent 1.15px);
     background-size: 6px 6px;
 }
 
-.gstv-bar [data-gstv-id="videos"] .gstv-chip {
+.gstv-bar .gstv-chip[data-gstv-id="videos"] {
     background-color: #7a5a96;
     background-image: repeating-linear-gradient(
         135deg,
@@ -20,7 +20,7 @@
     );
 }
 
-.gstv-bar [data-gstv-id="maps"] .gstv-chip {
+.gstv-bar .gstv-chip[data-gstv-id="maps"] {
     background-color: #3d8b57;
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px),
@@ -28,7 +28,7 @@
     background-size: 7px 7px;
 }
 
-.gstv-bar [data-gstv-id="news"] .gstv-chip {
+.gstv-bar .gstv-chip[data-gstv-id="news"] {
     background-color: #c4843c;
     background-image: repeating-linear-gradient(
         180deg,
@@ -39,7 +39,7 @@
     );
 }
 
-.gstv-bar [data-gstv-id="shopping"] .gstv-chip {
+.gstv-bar .gstv-chip[data-gstv-id="shopping"] {
     background-color: #e0b04a;
     background-image:
         linear-gradient(45deg, rgba(80, 56, 0, 0.18) 25%, transparent 25%),
@@ -50,7 +50,7 @@
     background-position: 0 0, 0 4px, 4px -4px, -4px 0;
 }
 
-.gstv-bar [data-gstv-id="books"] .gstv-chip {
+.gstv-bar .gstv-chip[data-gstv-id="books"] {
     background-color: #8d6e63;
     background-image: repeating-linear-gradient(
         90deg,
@@ -61,20 +61,20 @@
     );
 }
 
-.gstv-bar [data-gstv-id="forums"] .gstv-chip {
+.gstv-bar .gstv-chip[data-gstv-id="forums"] {
     background-color: #3d8a80;
     background-image:
         repeating-linear-gradient(45deg, transparent 0, transparent 4px, rgba(255, 255, 255, 0.16) 4px, rgba(255, 255, 255, 0.16) 6px),
         repeating-linear-gradient(-45deg, transparent 0, transparent 4px, rgba(255, 255, 255, 0.12) 4px, rgba(255, 255, 255, 0.12) 6px);
 }
 
-.gstv-bar [data-gstv-id="shorts"] .gstv-chip {
+.gstv-bar .gstv-chip[data-gstv-id="shorts"] {
     background-color: #8e6b82;
     background-image: radial-gradient(rgba(255, 255, 255, 0.28) 1.1px, transparent 1.2px);
     background-size: 6px 6px;
 }
 
-.gstv-bar [data-gstv-id="flights"] .gstv-chip {
+.gstv-bar .gstv-chip[data-gstv-id="flights"] {
     background-color: #4a86a8;
     background-image: repeating-linear-gradient(
         -25deg,
@@ -85,7 +85,7 @@
     );
 }
 
-.gstv-bar [data-gstv-id="finance"] .gstv-chip {
+.gstv-bar .gstv-chip[data-gstv-id="finance"] {
     background-color: #4d5b63;
     background-image: repeating-linear-gradient(
         45deg,
@@ -96,18 +96,12 @@
     );
 }
 
-.gstv-bar [data-gstv-id="ai"] .gstv-chip {
+.gstv-bar .gstv-chip[data-gstv-id="ai"] {
     background-color: #5c63a6;
     background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.22), transparent 42%);
 }
 
-.gstv-bar [data-gstv-id="more"] .gstv-chip {
-    background-color: #6b7075;
-    background-image: repeating-linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.14) 0,
-        rgba(255, 255, 255, 0.14) 2px,
-        transparent 2px,
-        transparent 6px
-    );
+.gstv-bar .gstv-chip[data-gstv-id="more"] {
+    background-color: #dadce0;
+    background-image: none;
 }
