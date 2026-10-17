@@ -20,3 +20,11 @@ Works in Firefox for desktop and Firefox for Android. Listed on [addons.mozilla.
 Install it from the add-on page in Firefox for Android (113 or later) after this version is published.
 
 To try a local build on a phone, connect the device over USB and follow [Mozilla's Android extension docs](https://extensionworkshop.com/documentation/develop/developing-extensions-for-firefox-for-android/).
+
+##### Tasklist
+
+- Android no longer works, DOM must have changed needs fixing.
+- Make it so that it removes all quickly and show only when ready, on very slow
+machines it shows the old version for a second or two and changes right when
+you're ready to click.
+
