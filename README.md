@@ -27,4 +27,5 @@ To try a local build on a phone, connect the device over USB and follow [Mozilla
 - Make it so that it removes all quickly and show only when ready, on very slow
 machines it shows the old version for a second or two and changes right when
 you're ready to click.
+- Swap AI Mode with news including their colors, or add it as another thing.
 
