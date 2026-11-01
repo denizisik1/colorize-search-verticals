@@ -3,17 +3,17 @@ const MAIN_ORDER = [
     'images',
     'videos',
     'maps',
-    'news',
+    'ai',
     'shopping'
 ];
 
 const MORE_ORDER = [
+    'news',
     'books',
     'forums',
     'shorts',
     'flights',
-    'finance',
-    'ai'
+    'finance'
 ];
 
 const VERTICAL_ORDER = MAIN_ORDER.concat(MORE_ORDER);

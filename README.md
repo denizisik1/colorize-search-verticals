@@ -2,7 +2,7 @@
 
 A Firefox addon that stops Google from reshuffling the search tabs.
 
-Google reorders Images, Videos, Maps, News and the rest based on the query. Muscle memory breaks: the second tab is not always Images. This addon pins All, Images, Videos, Maps, News, and Shopping in that order, tucks the rare ones under More, and gives each tab its own muted color and pattern.
+Google reorders Images, Videos, Maps, News and the rest based on the query. Muscle memory breaks: the second tab is not always Images. This addon pins All, Images, Videos, Maps, AI Mode, and Shopping in that order, tucks the rare ones under More, and gives each tab its own muted color and pattern.
 
 ![Pinned search tabs, each with its own color](misc/demo.png)
 
@@ -24,8 +24,4 @@ To try a local build on a phone, connect the device over USB and follow [Mozilla
 ##### Tasklist
 
 - Android no longer works, DOM must have changed needs fixing.
-- Make it so that it removes all quickly and show only when ready, on very slow
-machines it shows the old version for a second or two and changes right when
-you're ready to click.
-- Swap AI Mode with news including their colors, or add it as another thing.
 

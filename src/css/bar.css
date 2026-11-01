@@ -8,6 +8,10 @@
     overflow: visible !important;
 }
 
+html:not(.gstv-reveal) div[role="navigation"] div[role="list"]:has(a[href*="udm="], a[href*="tbm="]):not(.gstv-bar) {
+    visibility: hidden;
+}
+
 .gstv-unclip {
     overflow: visible !important;
 }
