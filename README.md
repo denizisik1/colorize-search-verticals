@@ -23,5 +23,7 @@ To try a local build on a phone, connect the device over USB and follow [Mozilla
 
 ##### Tasklist
 
-- Android no longer works, DOM must have changed needs fixing.
+- Android no longer works, DOM must have changed needs fixing. Once ready readd the deleted section in manifest.json file.
+
+- When videos is clicked, the position of videos and all flicker (quickly swap places back and forth) like multiple times then stop. Not a huge deal but it is a design bug.
 
