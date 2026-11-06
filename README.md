@@ -27,3 +27,5 @@ To try a local build on a phone, connect the device over USB and follow [Mozilla
 
 - When videos is clicked, the position of videos and all flicker (quickly swap places back and forth) like multiple times then stop. Not a huge deal but it is a design bug.
 
+- AI Mode could also have some pattern and not just the purple colour.
+
